@@ -8,7 +8,7 @@
 import sys
 import math
 
-
+GAMMA = 0.9
 
 class Node(object):
 	def __init__(self, location, type, reward):
@@ -25,7 +25,6 @@ class Node(object):
 
 	# Calculate the utility of the node:
 	def utilityCalculator(self):
-		y = 0.9
 
 		if self.type == 'terminal':
 			self.utility = self.reward
@@ -59,7 +58,7 @@ class Node(object):
 			[eastOption, 'East', self.east], [westOption, 'West', self.west])
 		bestOption = max(options)
 		
-		self.utility = self.reward + (y * bestOption[0])
+		self.utility = self.reward + (GAMMA * bestOption[0])
 		self.direction = bestOption[1]
 		self.parent = bestOption[2]
 
