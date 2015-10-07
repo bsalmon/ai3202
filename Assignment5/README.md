@@ -10,7 +10,7 @@ For example:
 ```
 Returns:
   ```
-  user@cu-cs-vm:~/ai/ai3202/Assignment5$ python assignment5_mdp.py World1MDP.txt 0.5
+user@cu-cs-vm:~/ai/ai3202/Assignment5$ python assignment5_mdp.py World1MDP.txt 0.5
 Location: (0,0)  Utility: 5.629
 Location: (1,0)  Utility: 6.361
 Location: (2,0)  Utility: 7.607
@@ -32,7 +32,7 @@ End: (9,7)  Reward: 50.000
 
 ### Answer to Question:
 
-  Increasing the epsilon value from 0.5 caused the utility to lower. An epsilon value of 450 changed the solution path entirely. However the new path is suboptimal because it crosses over two extra mountains compared to the first path. Any epsilon value greater than 160,999,999,999,989,999 results in an error and fails to move beyond the first node.
+  Increasing the epsilon value from 0.5 caused the utility to lower. An epsilon value of 450 or greater changed the solution path entirely. However the new path is suboptimal because it crosses over two extra mountains compared to the first path. Any epsilon value greater than 160,999,999,999,989,999 results in an error and fails to move beyond the first node.
   
   When e = 160999999999989999:
   ```
@@ -58,7 +58,7 @@ End: (9,7)  Reward: 50.000
 When e = 160999999999990000:
 ```
 user@cu-cs-vm:~/ai/ai3202/Assignment5$ python assignment5_mdp.py World1MDP.txt 160999999999990000
-Final Location: 0 , 0 Utility: 0.000
+Final Location: (0,0) Utility: 0.000
 user@cu-cs-vm:~/ai/ai3202/Assignment5$ 
 ```
   
